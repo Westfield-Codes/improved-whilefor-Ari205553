@@ -70,7 +70,7 @@ function askFive(){
 
 /* TEST BEFORE CONTINUING TO STAGE THREE! */
 
-/* STAGE 3: MULTIPLE TRIES (CHALLENGE!) */
+/* STAGE 3:! MULTIPLE TRIES (CHALLENGE!) */ 
 
 /* Refactor askQuestion per whileQuestions askFive calls askQuestion five times, counting and returning number wrong
  * Use the whileQuestions tab in the flowchart to guide you. 
