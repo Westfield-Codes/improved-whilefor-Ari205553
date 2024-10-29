@@ -32,7 +32,7 @@ function askQuestion(question){
     let product = a*b;
     let equation =  question + " : what is " + a + " * " + b + "?"
     let answer = prompt(equation);
-    if (answer == "q") { 
+    if (answer == "q"){
         alert(" quitter");
         return 2;
     }
