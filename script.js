@@ -77,3 +77,27 @@ function askFive(){
  * @param: none
  * @return: score (0-5)
  */
+ function askQuestion(question){
+    let wrong = 0;
+    let a = Math.floor(Math.random()*7)+3;
+    let b = Math.floor(Math.random()*7)+3;
+    let product = a*b;
+    let equation =  question + " : what is " + a + " * " + b + "?";
+    let answer = 0;
+    while (answer != product || answer != "q"){
+        let answer = prompt(equation);
+        if (answer == "q"){
+            alert("quitter");
+            wrong = 2;
+        }
+      if (answer == product){
+        alert("correct");
+      }
+        else{
+            alert("incorrect try again");
+            wrong = 1;
+        } 
+      }
+    return wrong;
+
+ }
