@@ -28,25 +28,29 @@ function askFive(){
  * @param: question (integer 1-5)
  * @return: integer (0 or 1)
  */
-function askQuestion(){
-    let a = Math.floor(Math.random()*7)+3
-    let b = Math.floor(Math.random()*7)+3
+function askQuestion(question){
+    let wrong = 0;
+    let a = Math.floor(Math.random()*7)+3;
+    let b = Math.floor(Math.random()*7)+3;
     let product = a*b;
-    let equation = a + "*" + b + "=??";
-    let answer = prompt(equation);
-    if (answer == "q"){
-        alert("quitter");
-        wrong = 2;
+    let equation =  question + " : what is " + a + " * " + b + "?";
+    let answer = 0;
+    while (answer != product && answer != "q"){
+        answer = prompt(equation);
+        if (answer == "q"){
+            alert("quitter");
+            wrong = 2;
         }
-    else if (answer == product){
-        alert("correct");
-        return 0;
-      }
-    else{
-        alert("incorrect");
-        return 1;
+        else if (answer == product){
+            alert("correct");
+        }
+        else {
+            alert("incorrect try again");
+            wrong = 1;
         } 
-}
+      }
+    return wrong;
+ }
 
 /* TEST BEFORE CONTINUING TO STAGE THREE! */
 
